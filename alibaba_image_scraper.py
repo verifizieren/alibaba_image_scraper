@@ -88,7 +88,7 @@ def send_zip_file(zip_file):
 def extract_image_links_from_url(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
-    parent_div = soup.find('div', class_='thumb-list')
+    parent_div = soup.find('div', class_='image-list')
 
     img_tags = parent_div.find_all('img')
     src_links = filter_images(img_tags)
@@ -102,7 +102,7 @@ def filter_images(img_tags):
                  and any(ext in img['src'] for ext in allowed_extensions) 
                  and 'video' not in img['src'].lower()]
     for index, link in enumerate(src_links):
-        src_links[index] = src_links[index][:-14]
+        src_links[index] = src_links[index][:-12]
     return src_links
 
 def download_image(link):
