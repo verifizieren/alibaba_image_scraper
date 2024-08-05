@@ -16,58 +16,58 @@ This repository contains the code for a web application designed to download ima
 To set up and run the Flask application, follow these steps:
 
 1. **Clone the repository:**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/verifizieren/alibaba_image_scraper.git
    cd alibaba_image_scraper
-   \`\`\`
+   ```
 
 2. **Set up a virtual environment (optional but recommended):**
-   \`\`\`bash
+   ```bash
    python3 -m venv venv
    source venv/bin/activate  # On Windows use \`venv\Scripts\activate\`
-   \`\`\`
+   ```
 
 3. **Install the required packages:**
-   \`\`\`bash
+   ```bash
    pip install flask requests beautifulsoup4
-   \`\`\`
+   ```
 
 4. **Run the application:**
-   \`\`\`bash
+   ```bash
    python app.py
-   \`\`\`
+   ```
 
 ### Node.js Version
 
 To set up and run the Node.js application, follow these steps:
 
 1. **Clone the repository:**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/verifizieren/alibaba_image_scraper.git
    cd alibaba_image_scraper
-   \`\`\`
+   ```
 
 2. **Navigate to the Node.js project directory:**
-   \`\`\`bash
+   ```bash
    cd nodejs_version
-   \`\`\`
+   ```
 
 3. **Install the required packages:**
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 4. **Run the application:**
-   \`\`\`bash
+   ```bash
    node src/app.js
-   \`\`\`
+   ```
 
 ## Usage
 
 ### Flask Version
 
 1. **Access the Web Interface:**
-   - Open your browser and navigate to \`http://127.0.0.1:5000/\`.
+   - Open your browser and navigate to `http://127.0.0.1:5000/`.
    - You should see a form asking for a URL.
 
 2. **Enter a URL and Download Images:**
@@ -78,7 +78,7 @@ To set up and run the Node.js application, follow these steps:
 ### Node.js Version
 
 1. **Access the Web Interface:**
-   - Open your browser and navigate to \`http://localhost:3000/\`.
+   - Open your browser and navigate to `http://localhost:3000/`.
    - You should see a form asking for a URL.
 
 2. **Enter a URL and Download Images:**
@@ -90,21 +90,21 @@ To set up and run the Node.js application, follow these steps:
 
 ### Flask Version
 
-- **\`index()\`**: Handles the main route ('/'). Displays the HTML form on GET requests and processes the form data on POST requests.
-- **\`handle_post_request()\`**: Processes the form data from the POST request, extracts image links from the provided URL, and initiates the ZIP download.
-- **\`create_zip_file(links)\`**: Takes image links, downloads the images, and packages them into a ZIP file.
-- **\`send_zip_file(zip_file)\`**: Sends the ZIP file to the client.
-- **\`extract_image_links_from_url(url)\`**: Fetches the content of the given URL, parses it for image links, and filters them based on allowed extensions.
-- **\`filter_images(img_tags)\`**: Filters out image links based on certain criteria to ensure only valid image files are downloaded.
-- **\`download_image(link)\`**: Downloads an image from a given link.
+- **`index()`**: Handles the main route ('/'). Displays the HTML form on GET requests and processes the form data on POST requests.
+- **`handle_post_request()`**: Processes the form data from the POST request, extracts image links from the provided URL, and initiates the ZIP download.
+- **`create_zip_file(links)`**: Takes image links, downloads the images, and packages them into a ZIP file.
+- **`send_zip_file(zip_file)`**: Sends the ZIP file to the client.
+- **`extract_image_links_from_url(url)`**: Fetches the content of the given URL, parses it for image links, and filters them based on allowed extensions.
+- **`filter_images(img_tags)`**: Filters out image links based on certain criteria to ensure only valid image files are downloaded.
+- **`download_image(link)`**: Downloads an image from a given link.
 
 ### Node.js Version
 
-- **\`app.get('/')\`**: Handles the main route ('/'). Displays the HTML form on GET requests.
-- **\`app.post('/')\`**: Processes the form data from the POST request, extracts image links from the provided URL, and initiates the ZIP download.
-- **\`extractImageLinksFromUrl(url)\`**: Fetches the content of the given URL, parses it for image links, and filters them based on allowed extensions.
-- **\`createZipStream(links)\`**: Takes image links, downloads the images, and packages them into a ZIP file stream.
-- **\`download_image(link)\`**: Downloads an image from a given link.
+- **`app.get('/')`**: Handles the main route ('/'). Displays the HTML form on GET requests.
+- **`app.post('/')`**: Processes the form data from the POST request, extracts image links from the provided URL, and initiates the ZIP download.
+- **`extractImageLinksFromUrl(url)`**: Fetches the content of the given URL, parses it for image links, and filters them based on allowed extensions.
+- **`createZipStream(links)`**: Takes image links, downloads the images, and packages them into a ZIP file stream.
+- **`download_image(link)`**: Downloads an image from a given link.
 
 ## Contact
 
