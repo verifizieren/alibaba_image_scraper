@@ -32,8 +32,7 @@ async function extractImageLinksFromUrl(url) {
     const allowedExtensions = ['.jpeg', '.jpg', '.png', '.gif', '.bmp'];
     const srcLinks = imgTags.map(img => $(img).attr('src'))
         .filter(src => allowedExtensions.some(ext => src.includes(ext)) && !src.toLowerCase().includes('video'))
-        .map(src => src.slice(0, -12)); // Assuming slicing last 12 characters as per the original Python script
-
+        .map(src => src.slice(0, -12));
     return srcLinks;
 }
 
